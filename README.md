@@ -54,3 +54,9 @@ required if ci=True in input JSON.
 You are allowed to use the following external libraries:
 numpy, scipy, sklearn, and pandas
 any of the common python testing libraries
+
+**The process is to run this file in colab or kaggle or jupyter**
+
+**!python main.py example_input.json example_output.json**
+**Make sure your input json file metrics keys and the main file calculating the values for those keys should in sync other wise there would be exception thrown and the 
+output json file could not be formed**
