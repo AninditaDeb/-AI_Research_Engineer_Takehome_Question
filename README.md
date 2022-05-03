@@ -77,3 +77,6 @@ data_new=dataset1[:,(1,2,3,4,5)]
 target=dataset1[:,6],
 
 **Please note:If you wish to remove the above part you can do so,but according to my script the test and target needs to be kept separated**
+**The example_input.json can be generated using the command !python Actual.py example_input.py**
+**The command that should be used to excute the main file !python main.py --Input example_input.json --Dataset diabetes.csv --Output example_output.json**
+**The dataset can be changed also if you wish to remove the preprocessing steps from the main.py file, it can be done however the data and response/target variable are to be kept separate.**
