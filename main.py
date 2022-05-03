@@ -25,7 +25,9 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Input and output file')
 parser.add_argument('--Input', dest='Input', type=str, help='Name of input json file',required=True)
+parser.add_argument('--Dataset', dest='Dataset', type=str, help='File path and file name of the dataset',required=True)
 parser.add_argument('--Output', dest='Output', type=str, help='Name of output json file',required=True)
+
 args = parser.parse_args()
 ####################################Loading the json file  with input data and #############################################
 ########checking for the boolean value ci mentioned in input json file######################################################
@@ -89,7 +91,7 @@ with open(args.Input, 'r') as f:
             upper_bound={"upper_bound_Accuracy":"NA","upper_bound_Sensitivity":"NA","upper_bound_Specificity":"NA"}
         
         else:
-            dataset=pd.read_csv('diabetes.csv') 
+            dataset=pd.read_csv(args.Dataset) 
             dataset=dataset.loc[:,['Glucose','BloodPressure','Insulin','BMI','DiabetesPedigreeFunction','Age','Outcome']]
             dataset1=np.array(dataset)
             data_new=dataset1[:,(1,2,3,4,5)]
